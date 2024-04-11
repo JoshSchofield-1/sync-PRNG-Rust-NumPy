@@ -1,0 +1,20 @@
+[package]
+name = "sync-PRNG-Rust-NumPy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mt19937 = "2.0.1"
+mersenne_twister = "1.1.1"
+
+# Older version of rand required for mersenne_twister crate (mt19937 crate works fine with newer rand)
+rand = "<0.5"
+#rand = "0.8.5"
+
+serde = { version = "1.0.130", features = ["derive"]}
+serde_json = "1.0.114"
+shellexpand = "3.1.0"
+clap = { version = "4.5.2", features = ["cargo", "derive"] }
+float-cmp = "0.9.0"
